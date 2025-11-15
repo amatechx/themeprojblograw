@@ -1,0 +1,580 @@
+/*!
+ * Rawtracks Blogspot Theme - Responsive CSS
+ * Mobile-first responsive design optimized untuk Blogspot
+ * GitHub: https://github.com/amatechx/themeprojblograw
+ */
+
+/* ==================== MOBILE FIRST BASE ==================== */
+
+/* Extra Small Devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    :root {
+        --qode-header-height: 60px;
+        --qode-container-padding: 15px;
+        --qode-font-size-base: 14px;
+        --qode-line-height-base: 1.5;
+    }
+
+    body {
+        font-size: var(--qode-font-size-base);
+        line-height: var(--qode-line-height-base);
+    }
+
+    /* ==================== HEADER ==================== */
+    .qodef-header {
+        padding: 8px 0;
+    }
+
+    .qodef-header-inner {
+        padding: 0 var(--qode-container-padding);
+    }
+
+    .qodef-logo {
+        font-size: 20px;
+    }
+
+    .qodef-nav {
+        display: none; /* Hidden by default on mobile */
+    }
+
+    /* Mobile menu button */
+    .qodef-mobile-menu-btn {
+        display: block;
+        background: none;
+        border: none;
+        color: var(--qode-text-color);
+        font-size: 24px;
+        cursor: pointer;
+        padding: 8px;
+    }
+
+    .qodef-mobile-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(28, 28, 28, 0.98);
+        z-index: 2000;
+        padding: 80px 30px 30px;
+    }
+
+    .qodef-mobile-menu.active {
+        display: block;
+    }
+
+    .qodef-mobile-menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .qodef-mobile-menu li {
+        margin: 15px 0;
+    }
+
+    .qodef-mobile-menu a {
+        display: block;
+        color: var(--qode-text-color);
+        text-decoration: none;
+        font-size: 18px;
+        padding: 15px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        transition: color 0.3s ease;
+    }
+
+    .qodef-mobile-menu a:hover {
+        color: var(--qode-main-color);
+    }
+
+    /* ==================== AUDIO PLAYER ==================== */
+    .qodef-audio-player {
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 15px;
+    }
+
+    .qodef-player-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        margin-bottom: 25px;
+    }
+
+    .qodef-album-cover {
+        width: 80px;
+        height: 80px;
+        margin-right: 0;
+    }
+
+    .qodef-track-info h3 {
+        font-size: 18px;
+    }
+
+    .qodef-track-info p {
+        font-size: 13px;
+    }
+
+    .qodef-player-controls {
+        flex-direction: column;
+        gap: 20px;
+        align-items: stretch;
+    }
+
+    .qodef-play-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 18px;
+        align-self: center;
+    }
+
+    .qodef-progress-bar {
+        width: 100%;
+        order: 1;
+    }
+
+    .qodef-time-display {
+        order: 2;
+        text-align: center;
+        min-width: auto;
+        font-size: 12px;
+    }
+
+    .qodef-volume-control {
+        display: none; /* Hidden on mobile to save space */
+    }
+
+    /* ==================== ALBUM GRID ==================== */
+    .qodef-album-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin: 30px 0;
+    }
+
+    .qodef-album-item {
+        border-radius: 15px;
+    }
+
+    .qodef-album-image {
+        height: 200px;
+    }
+
+    .qodef-album-info {
+        padding: 20px;
+    }
+
+    .qodef-album-title {
+        font-size: 18px;
+    }
+
+    .qodef-album-artist {
+        font-size: 13px;
+    }
+
+    .qodef-album-description {
+        font-size: 13px;
+    }
+
+    /* ==================== BLOG POSTS ==================== */
+    .qodef-blog-post {
+        margin: 20px 0;
+        border-radius: 15px;
+    }
+
+    .qodef-post-header {
+        padding: 25px 20px;
+    }
+
+    .qodef-post-header::before {
+        left: 20px;
+    }
+
+    .qodef-post-title {
+        font-size: 22px;
+    }
+
+    .qodef-post-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        font-size: 13px;
+    }
+
+    .qodef-post-content {
+        padding: 25px 20px;
+    }
+
+    .qodef-post-content h2 {
+        font-size: 20px;
+    }
+
+    .qodef-post-content p {
+        font-size: 14px;
+    }
+
+    /* ==================== FOOTER ==================== */
+    .qodef-footer {
+        padding: 40px 0 30px;
+    }
+
+    .qodef-footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-bottom: 25px;
+    }
+
+    .qodef-footer-section h4 {
+        font-size: 16px;
+    }
+
+    .qodef-footer-section p,
+    .qodef-footer-section a {
+        font-size: 14px;
+    }
+
+    .qodef-footer-bottom {
+        font-size: 13px;
+        padding-top: 20px;
+    }
+}
+
+/* Small Devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .qodef-container {
+        max-width: 540px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .qodef-album-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .qodef-audio-player {
+        padding: 30px;
+    }
+
+    .qodef-player-controls {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .qodef-volume-control {
+        display: flex;
+    }
+}
+
+/* Medium Devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .qodef-container {
+        max-width: 720px;
+    }
+
+    .qodef-header-inner {
+        padding: 0 30px;
+    }
+
+    .qodef-album-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .qodef-footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Large Devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .qodef-container {
+        max-width: 960px;
+    }
+
+    .qodef-album-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Extra Large Devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .qodef-container {
+        max-width: 1200px;
+    }
+
+    .qodef-album-grid {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+}
+
+/* ==================== CUSTOM BREAKPOINTS ==================== */
+
+/* Ultra-wide screens */
+@media (min-width: 1400px) {
+    .qodef-container {
+        max-width: 1320px;
+    }
+
+    .qodef-album-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* ==================== LANDSCAPE ORIENTATION ==================== */
+@media (max-height: 500px) and (orientation: landscape) {
+    .qodef-header {
+        padding: 8px 0;
+    }
+
+    .qodef-header-inner {
+        padding: 0 20px;
+    }
+
+    .qodef-main-content {
+        margin-top: 50px;
+    }
+
+    .qodef-audio-player {
+        padding: 15px;
+        margin: 15px 0;
+    }
+
+    .qodef-player-header {
+        margin-bottom: 15px;
+    }
+
+    .qodef-album-cover {
+        width: 60px;
+        height: 60px;
+        margin-right: 15px;
+    }
+
+    .qodef-track-info h3 {
+        font-size: 16px;
+    }
+
+    .qodef-track-info p {
+        font-size: 12px;
+    }
+
+    .qodef-player-controls {
+        gap: 10px;
+        margin: 15px 0;
+    }
+
+    .qodef-play-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 16px;
+    }
+
+    .qodef-volume-control {
+        display: none; /* Hidden in landscape mode */
+    }
+}
+
+/* ==================== HIGH DPI DISPLAYS ==================== */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .qodef-album-cover,
+    .qodef-logo {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* ==================== TOUCH DEVICES ==================== */
+@media (pointer: coarse) {
+    /* Larger touch targets for touch devices */
+    .qodef-play-btn {
+        width: 60px;
+        height: 60px;
+        min-height: 44px; /* Apple's recommended minimum */
+    }
+
+    .qodef-nav a {
+        padding: 12px 20px;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+
+    .qodef-volume-btn {
+        width: 44px;
+        height: 44px;
+        min-width: 44px;
+        min-height: 44px;
+    }
+
+    /* Improve touch scrolling */
+    .qodef-album-grid {
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Touch feedback */
+    .qodef-album-item:active {
+        transform: scale(0.98);
+        transition: transform 0.1s ease;
+    }
+
+    .qodef-play-btn:active {
+        transform: scale(0.95);
+    }
+}
+
+/* ==================== REDUCED MOTION ==================== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .qodef-fade-in,
+    .qodef-slide-up,
+    .qodef-scale-in {
+        animation: none !important;
+        transform: none !important;
+        opacity: 1 !important;
+    }
+}
+
+/* ==================== DARK MODE PREFERENCES ==================== */
+@media (prefers-color-scheme: dark) {
+    /* Already optimized for dark theme, but can add overrides if needed */
+    :root {
+        /* Can add dark mode specific variables here if needed */
+    }
+}
+
+/* ==================== PRINT STYLES ==================== */
+@media print {
+    .qodef-header,
+    .qodef-footer,
+    .qodef-audio-player {
+        display: none !important;
+    }
+
+    .qodef-main-content {
+        margin-top: 0 !important;
+    }
+
+    .qodef-blog-post {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    body {
+        background: white !important;
+        color: black !important;
+        font-size: 12pt;
+        line-height: 1.4;
+    }
+
+    .qodef-post-title {
+        font-size: 18pt;
+        color: black !important;
+    }
+
+    .qodef-post-content {
+        font-size: 11pt;
+    }
+}
+
+/* ==================== ACCESSIBILITY ==================== */
+
+/* Focus indicators */
+@media (prefers-reduced-motion: no-preference) {
+    .qodef-play-btn:focus,
+    .qodef-nav a:focus,
+    .qodef-volume-btn:focus {
+        outline: 2px solid var(--qode-main-color);
+        outline-offset: 2px;
+    }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+    :root {
+        --qode-main-color: #ffffff;
+        --qode-text-color: #ffffff;
+        --qode-page-background-color: #000000;
+        --qode-border-color: #ffffff;
+    }
+
+    .qodef-audio-player,
+    .qodef-album-item,
+    .qodef-blog-post {
+        border: 2px solid var(--qode-main-color);
+    }
+}
+
+/* ==================== UTILITIES ==================== */
+@media (max-width: 767.98px) {
+    .qodef-mobile-hidden {
+        display: none !important;
+    }
+
+    .qodef-mobile-only {
+        display: block !important;
+    }
+
+    .qodef-mobile-flex {
+        display: flex !important;
+    }
+
+    .qodef-mobile-grid-1 {
+        grid-template-columns: 1fr !important;
+    }
+
+    .qodef-mobile-text-center {
+        text-align: center !important;
+    }
+
+    .qodef-mobile-full-width {
+        width: 100% !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .qodef-desktop-hidden {
+        display: none !important;
+    }
+
+    .qodef-desktop-only {
+        display: block !important;
+    }
+
+    .qodef-desktop-flex {
+        display: flex !important;
+    }
+
+    .qodef-desktop-grid-2 {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .qodef-desktop-text-left {
+        text-align: left !important;
+    }
+}
+
+/* ==================== CONTAINER QUERIES (Future-proof) ==================== */
+@container (max-width: 400px) {
+    .qodef-album-item .qodef-album-info {
+        padding: 15px;
+    }
+
+    .qodef-album-title {
+        font-size: 16px;
+    }
+}
+
+@container (min-width: 600px) {
+    .qodef-album-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
