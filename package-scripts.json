@@ -1,0 +1,75 @@
+{
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "lint:check": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "type-check": "tsc --noEmit",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:unit": "jest tests/unit --coverage",
+    "test:integration": "jest tests/integration --coverage",
+    "test:e2e": "cypress run",
+    "test:e2e:open": "cypress open",
+    "test:ci": "jest --ci --coverage --watchAll=false",
+    "test:smoke": "cypress run --spec 'cypress/e2e/smoke/*'",
+    "test:accessibility": "cypress run --spec 'cypress/e2e/accessibility/*'",
+    "test:performance": "cypress run --spec 'cypress/e2e/performance/*'",
+    "test:env:setup": "node scripts/setup-test-env.js",
+    "test:env:teardown": "node scripts/teardown-test-env.js",
+    "docker:build": "docker build -t themeprojblograw .",
+    "docker:run": "docker run -p 3000:3000 themeprojblograw",
+    "docker:stop": "docker stop $(docker ps -q --filter ancestor=themeprojblograw)",
+    "docker:clean": "docker system prune -f",
+    "prepare": "husky install",
+    "precommit": "lint-staged",
+    "commit": "git-cz",
+    "release": "semantic-release",
+    "analyze": "cross-env ANALYZE=true npm run build",
+    "build:stats": "npm run build -- --stats",
+    "lighthouse": "lhci autorun",
+    "lighthouse:ci": "lhci autorun --upload.target=temporary-public-storage",
+    "security:audit": "npm audit",
+    "security:fix": "npm audit fix",
+    "security:check": "npm run security:audit && npx audit-ci --moderate",
+    "deps:update": "npm update",
+    "deps:check": "npx npm-check-updates",
+    "deps:upgrade": "npx npm-check-updates -u",
+    "clean": "rimraf .next out dist coverage test-results cypress/screenshots cypress/videos",
+    "clean:all": "npm run clean && rimraf node_modules package-lock.json",
+    "serve": "serve -s build -l 3000",
+    "validate": "npm run lint && npm run type-check && npm run test:unit",
+    "validate:ci": "npm run lint && npm run type-check && npm run test:ci && npm run security:check",
+    "setup": "npm install && npx husky install && npm run prepare",
+    "postinstall": "npx husky install && npx playwright install --with-deps",
+    "prebuild": "npm run clean",
+    "predeploy": "npm run build && npm run test:smoke",
+    "deploy:staging": "npm run predeploy && echo 'Deploying to staging...'",
+    "deploy:production": "npm run predeploy && echo 'Deploying to production...'"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,yml,yaml}": [
+      "prettier --write"
+    ],
+    "*.{css,scss,less}": [
+      "prettier --write"
+    ]
+  },
+  "commitizen": {
+    "path": "@commitlint/cz-commitlint"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

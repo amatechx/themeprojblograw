@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:version='2' class='v2' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+    <meta content='IE=EmulateIE7' http-equiv='X-UA-Compatible'/>
+    <b:if cond='data:blog.isMobile'>
+        <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no' name='viewport'/>
+    <b:else/>
+        <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0' name='viewport'/>
+    </b:if>
+
+    <b:include data='blog' name='all-head-content'/>
+    <title><data:blog.pageTitle/></title>
+
+    <b:skin>
+    <![CDATA[
+/* CSS akan dimuat melalui GitHub CDN */
+@import url('https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/github-assets/css/main.css');
+@import url('https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/github-assets/css/rawtracks-core.css');
+@import url('https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/github-assets/css/responsive.css');
+@import url('https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/github-assets/vendors/css/elegant-icons.min.css');
+@import url('https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/github-assets/vendors/css/swiper.min.css');
+
+/* Custom CSS for Blogspot compatibility */
+.blogger-content { display: none; }
+.qodef-page-wrapper { margin-top: 0; }
+.qodef-content-grid { max-width: 1400px; margin: 0 auto; }
+.qodef-grid-inner { display: flex; flex-wrap: wrap; margin: 0 -15px; }
+.qodef-grid-item { padding: 0 15px; }
+    ]]>
+    </b:skin>
+
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap' rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap' rel='stylesheet' type='text/css'/>
+
+    <!-- External Scripts -->
+    <script src='https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/github-assets/vendors/js/jquery.min.js'/>
+    <script src='https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/github-assets/vendors/js/gsap.min.js'/>
+    <script src='https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/github-assets/vendors/js/ScrollTrigger.min.js'/>
+    <script src='https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/github-assets/vendors/js/swiper.min.js'/>
+    <script src='https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/github-assets/js/audio-player.js'/>
+    <script src='https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/github-assets/js/animations.js'/>
+    <script src='https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/github-assets/js/blogspot-navigation.js'/>
+</head>
+
+<body>
+    <div id='qodef-page-wrapper'>
+        <div class='qodef-menu-cover'></div>
+
+        <!-- Header Section -->
+        <header id='qodef-page-header' role='banner'>
+            <div id='qodef-page-header-inner'>
+                <div class='qodef-header-wrapper'>
+                    <div class='qodef-header-logo'>
+                        <a expr:href='data:blog.homepageUrl' class='qodef-header-logo-link qodef-height--not-set qodef-source--svg-path' rel='home'>
+                            <img alt='Rawtracks Logo' src='https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/github-assets/images/new-logo-header-touch-devices.png'/>
+                        </a>
+                    </div>
+
+                    <!-- Navigation -->
+                    <nav class='qodef-header-navigation' role='navigation' aria-label='Top Menu'>
+                        <ul id='menu-main-menu' class='menu'>
+                            <li class='menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-home'>
+                                <a href='javascript:void(0);' onclick='return false;'><span class='qodef-menu-item-text'>Home</span></a>
+                                <div class='qodef-drop-down-second'>
+                                    <div class='qodef-drop-down-second-inner'>
+                                        <ul class='sub-menu'>
+                                            <li class='menu-item menu-item-home current-menu-item'>
+                                                <a expr:href='data:blog.homepageUrl'><span class='qodef-menu-item-text'>Main Home</span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class='menu-item'>
+                                <a href='javascript:void(0);' onclick='return false;'><span class='qodef-menu-item-text'>Pages</span></a>
+                            </li>
+                            <li class='menu-item'>
+                                <a href='javascript:void(0);' onclick='return false;'><span class='qodef-menu-item-text'>Events</span></a>
+                            </li>
+                            <li class='menu-item'>
+                                <a href='javascript:void(0);' onclick='return false;'><span class='qodef-menu-item-text'>Discography</span></a>
+                            </li>
+                            <li class='menu-item'>
+                                <a href='javascript:void(0);' onclick='return false;'><span class='qodef-menu-item-text'>Blog</span></a>
+                            </li>
+                            <li class='menu-item'>
+                                <a href='javascript:void(0);' onclick='return false;'><span class='qodef-menu-item-text'>Shop</span></a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <!-- Side Area Opener -->
+                    <div class='qodef-widget-holder qodef--one'>
+                        <div id='rawtracks_core_side_area_opener' class='widget widget_rawtracks_core_side_area_opener qodef-header-widget-area-one'>
+                            <a href='javascript:void(0)' class='qodef-opener-icon qodef-m qodef-source--predefined qodef-side-area-opener'>
+                                <span class='qodef-m-icon qodef--open'>
+                                    <svg class='qodef-svg--menu predefined' xmlns='http://www.w3.org/2000/svg' width='80' height='12' viewBox='0 0 80 12'>
+                                        <line x1='20' y1='11' x2='80' y2='11'></line>
+                                        <line x1='0' y1='1' x2='60' y2='1'></line>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Mobile Header -->
+        <header id='qodef-page-mobile-header' role='banner'>
+            <div id='qodef-page-mobile-header-inner'>
+                <a expr:href='data:blog.homepageUrl' class='qodef-mobile-header-logo-link qodef-height--set qodef-source--image' rel='home'>
+                    <img alt='Rawtracks Logo Mobile' src='https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/github-assets/images/new-logo-header-touch-devices.png'/>
+                </a>
+                <a href='javascript:void(0)' class='qodef-opener-icon qodef-m qodef-source--predefined qodef-mobile-header-opener'>
+                    <span class='qodef-m-icon qodef--open'>
+                        <svg class='qodef-svg--menu predefined' xmlns='http://www.w3.org/2000/svg' width='80' height='12' viewBox='0 0 80 12'>
+                            <line x1='20' y1='11' x2='80' y2='11'></line>
+                            <line x1='0' y1='1' x2='60' y2='1'></line>
+                        </svg>
+                    </span>
+                    <span class='qodef-m-icon qodef--close'>
+                        <svg class='qodef-svg--close predefined' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'>
+                            <line x1='23' y1='1' x2='1' y2='23'></line>
+                            <line x1='1' y1='1' x2='23' y2='23'></line>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+
+            <nav class='qodef-mobile-header-navigation' role='navigation' aria-label='Mobile Menu'>
+                <ul id='menu-main-menu-mobile' class='menu'>
+                    <li class='menu-item menu-item-home current-menu-item'>
+                        <a expr:href='data:blog.homepageUrl'><span class='qodef-menu-item-text'>Home</span></a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <div id='qodef-page-outer'>
+            <div id='qodef-page-inner' class='qodef-content-full-width'>
+                <main id='qodef-page-content' class='qodef-grid qodef-layout--template' role='main'>
+                    <div class='qodef-grid-inner clear'>
+                        <div class='qodef-grid-item qodef-page-content-section qodef-col--12'>
+
+                            <!-- Audio Player Section -->
+                            <section class='elementor-section elementor-top-section elementor-element elementor-section-full_width elementor-section-height-full elementor-section-content-middle elementor-section-height-default elementor-section-items-middle'>
+                                <div class='elementor-container elementor-column-gap-default'>
+                                    <div class='elementor-column elementor-col-100 elementor-top-column'>
+                                        <div class='elementor-widget-wrap elementor-element-populated'>
+                                            <div class='elementor-element elementor-widget-rawtracks_core_album_player'>
+                                                <div class='elementor-widget-container'>
+                                                    <div id='qodef-m-album-player' class='qodef-shortcode qodef-m qodef-album-player qodef-layout--waveform qodef--has-album qodef--init'>
+                                                        <div id='qodef-m-album-1' class='qodef-m-album jp-jplayer' data-album-id='1'>
+                                                            <audio id='jp_audio_player' preload='metadata'>
+                                                                <source src='https://www.soundjay.com/misc/sounds/bell-ringing-05.wav' type='audio/mpeg'/>
+                                                            </audio>
+                                                        </div>
+                                                        <div id='qodef-m-player-1' class='qodef-m-player' style='background-image: url(https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/github-assets/images/rbt-placeholder.jpg)'>
+                                                            <div class='qodef-m-player-waveform-progress'>
+                                                                <div class='qodef-m-track-progress jp-gui jp-interface'>
+                                                                    <div class='jp-progress'>
+                                                                        <div class='jp-seek-bar'>
+                                                                            <div class='jp-play-bar'></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class='qodef-m-player-inner'>
+                                                                <div class='qodef-m-player-left'>
+                                                                    <div class='qodef-m-album-image'>
+                                                                        <img alt='Album Cover' src='https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/github-assets/images/rbt-placeholder.jpg'/>
+                                                                    </div>
+                                                                    <div class='qodef-m-player-track-info'>
+                                                                        <h4 class='qodef-m-player-track-title jp-title'>Demo Track</h4>
+                                                                        <div class='qodef-m-artist'>
+                                                                            <a class='qodef-m-artist-link' href='#'>Demo Artist</a>
+                                                                        </div>
+                                                                        <div class='qodef-m-info'>
+                                                                            <div class='qodef--info-tags'>
+                                                                                <a href='#' rel='tag'>demo</a>
+                                                                            </div>
+                                                                            <div class='qodef-m-subgenre'>
+                                                                                <a href='#' rel='tag'>electronic</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class='qodef-m-player-middle'>
+                                                                    <div class='qodef-m-player-controls jp-gui jp-interface'>
+                                                                        <ul class='jp-controls'>
+                                                                            <li><a class='jp-previous'>Previous</a></li>
+                                                                            <li><a class='jp-play'>Play</a></li>
+                                                                            <li><a class='jp-next'>Next</a></li>
+                                                                        </ul>
+                                                                    </div>
+                                                                    <div class='qodef-m-track-time jp-gui jp-interface'>
+                                                                        <span class='qodef-m-track-time-current jp-current-time'>00:00</span>/<span class='qodef-m-track-time-duration jp-duration'>00:00</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class='qodef-m-player-right'>
+                                                                    <div class='qodef-m-volume-control jp-gui jp-interface'>
+                                                                        <div class='jp-volume-controls'>
+                                                                            <div class='jp-volume-bar'>
+                                                                                <div class='jp-volume-bar-value'></div>
+                                                                            </div>
+                                                                            <a class='jp-mute'>Mute</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class='qodef-m-playlist jp-type-playlist'>
+                                                                <div class='jp-playlist'>
+                                                                    <ul class='tracks-list'>
+                                                                        <li class='jp-playlist-current'>
+                                                                            <div>
+                                                                                <a class='jp-playlist-item jp-playlist-current'>Demo Track</a>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <div class='qodef-m-spinner'>
+                                                                <svg class='qodef-svg--player-spinner qodef-m-spinner-icon' xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'>
+                                                                    <path d='M31.998 0C23.45 0 15.415 3.329 9.371 9.374 3.327 15.417-.001 23.454 0 32c0 8.548 3.328 16.583 9.372 22.628C15.415 60.672 23.45 64 31.999 64h.004C49.647 63.999 64.001 49.643 64 31.999c0-8.547-3.327-16.583-9.37-22.627C48.586 3.329 40.552 0 31.998 0zM32 62v1-1h-.003c-8.012 0-15.546-3.121-21.211-8.786C5.12 47.547 2 40.014 2 32c-.001-8.013 3.119-15.546 8.785-21.212C16.451 5.121 23.984 2 32.004 2c8.013 0 15.546 3.12 21.211 8.786 5.666 5.666 8.784 13.2 8.784 21.213C62 48.54 49 61.999 32 62z'></path>
+                                                                    <path d='M32 23c-4.961 0-8.999 4.037-9 8.998C23 36.962 27.038 41 32.001 41 36.963 40.998 41 36.96 41 32c0-4.962-4.038-9-9-9zm.001 16C28.141 39 25 35.859 25 31.998 25.001 28.14 28.141 25 32 25c3.86 0 7 3.14 7 7 0 3.858-3.14 6.999-6.999 7zM32 49v-2c-8.271 0-15-6.729-15-15h-2c0 9.374 7.626 17 17 17zM32 15v2c8.271 0 15 6.729 15 15h2c0-9.374-7.626-17-17-17z'></path>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- Latest Releases Section -->
+                            <section class='elementor-section elementor-top-section elementor-element elementor-section-full_width qodef-elementor-content-grid elementor-section-height-default elementor-section-height-default'>
+                                <div class='elementor-container elementor-column-gap-default'>
+                                    <div class='elementor-column elementor-col-100 elementor-top-column'>
+                                        <div class='elementor-widget-wrap elementor-element-populated'>
+                                            <div class='elementor-element elementor-widget-rawtracks_core_section_title'>
+                                                <div class='elementor-widget-container'>
+                                                    <div class='qodef-shortcode qodef-m qodef-section-title qodef-alignment--left'>
+                                                        <h2 class='qodef-m-title' style='color: #FFFFFF'>Latest Releases</h2>
+                                                        <div class='qodef-m-button'>
+                                                            <a class='qodef-shortcode qodef-m qodef-button qodef-layout--filled-rounded-small qodef-html--link' href='javascript:void(0);'>
+                                                                <span class='qodef-m-icon'>
+                                                                    <svg class='qodef-svg--banner-arrow' xmlns='http://www.w3.org/2000/svg'>
+                                                                        <line x1='1' y1='18' x2='17.8' y2='1.2'></line>
+                                                                        <line x1='1.2' y1='1' x2='18' y2='1'></line>
+                                                                        <line x1='18' y1='17.8' x2='18' y2='1'></line>
+                                                                    </svg>
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section class='elementor-section elementor-top-section elementor-element elementor-section-full_width qodef-elementor-content-grid elementor-section-height-default elementor-section-height-default'>
+                                <div class='elementor-container elementor-column-gap-default'>
+                                    <div class='elementor-column elementor-col-100 elementor-top-column'>
+                                        <div class='elementor-widget-wrap elementor-element-populated'>
+                                            <div class='elementor-element elementor-widget-rawtracks_core_album_list'>
+                                                <div class='elementor-widget-container'>
+                                                    <div class='qodef-shortcode qodef-m qodef-album-list qodef-item-layout--info-below qodef-filter-position--left qodef-filter-width--17 qodef--distort-animation-list qodef-grid qodef-layout--columns qodef-gutter--medium qodef-col-num--4 qodef-item-layout--info-below qodef-filter--on qodef--no-bottom-space qodef-pagination--off'>
+                                                        <div class='qodef-m-filter'>
+                                                            <div class='qodef-m-filter-items'>
+                                                                <a class='qodef-m-filter-item qodef--active' data-filter='*'>
+                                                                    <span class='qodef-m-filter-item-name'>Show All</span>
+                                                                </a>
+                                                                <a class='qodef-m-filter-item' data-filter='.beat'>
+                                                                    <span class='qodef-m-filter-item-name'>Beat</span>
+                                                                </a>
+                                                                <a class='qodef-m-filter-item' data-filter='.minimal'>
+                                                                    <span class='qodef-m-filter-item-name'>Minimal</span>
+                                                                </a>
+                                                                <a class='qodef-m-filter-item' data-filter='.trap'>
+                                                                    <span class='qodef-m-filter-item-name'>Trap</span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class='qodef-grid-inner clear'>
+                                                            <!-- Album items will be populated dynamically -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- Blog Posts Section (Dynamic Content) -->
+                            <div class='blog-posts-section'>
+                                <b:section class='blog-posts' id='blog-posts' showaddelement='yes'>
+                                    <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' version='2' visible='true'>
+                                        <b:widget-settings>
+                                            <b:widget-setting name='showDateHeader'>false</b:widget-setting>
+                                            <b:widget-setting name='style.textcolor'>#ffffff</b:widget-setting>
+                                            <b:widget-setting name='style.titlecolor'>#ffffff</b:widget-setting>
+                                            <b:widget-setting name='style.linkcolor'>#ffffff</b:widget-setting>
+                                            <b:widget-setting name='style.bgcolor'>transparent</b:widget-setting>
+                                            <b:widget-setting name='showShareButtons'>false</b:widget-setting>
+                                            <b:widget-setting name='showCommentLink'>false</b:widget-setting>
+                                            <b:widget-setting name='showAuthor'>false</b:widget-setting>
+                                            <b:widget-setting name='showDate'>true</b:widget-setting>
+                                            <b:widget-setting name='showLabels'>true</b:widget-setting>
+                                        </b:widget-settings>
+                                        <b:includable id='main'>
+                                            <b:if cond='data:blog.pageType == "index"'>
+                                                <div class='blog-posts-grid'>
+                                                    <b:loop values='data:posts' var='post'>
+                                                        <div class='blog-post-item'>
+                                                            <b:if cond='data:post.thumbnail'>
+                                                                <div class='post-thumbnail'>
+                                                                    <img expr:src='data:post.thumbnail.url' expr:alt='data:post.title'/>
+                                                                </div>
+                                                            </b:if>
+                                                            <h3 class='post-title'>
+                                                                <a expr:href='data:post.url'><data:post.title/></a>
+                                                            </h3>
+                                                            <div class='post-meta'>
+                                                                <span class='post-date'><data:post.dateHeader/></span>
+                                                                <span class='post-labels'>
+                                                                    <b:loop values='data:post.labels' var='label'>
+                                                                        <a expr:href='data:label.url' rel='tag'><data:label.name/></a>
+                                                                    </b:loop>
+                                                                </span>
+                                                            </div>
+                                                            <div class='post-snippet'>
+                                                                <data:post.snippet/>
+                                                            </div>
+                                                        </div>
+                                                    </b:loop>
+                                                </div>
+                                                <b:include name='nextprev'/>
+                                            <b:else/>
+                                                <b:include name='post'/>
+                                            </b:if>
+                                        </b:includable>
+                                    </b:widget>
+                                </b:section>
+                            </div>
+
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer id='qodef-page-footer' role='contentinfo'>
+            <div id='qodef-page-footer-top-area'>
+                <div id='qodef-page-footer-top-area-inner' class='qodef-content-grid'>
+                    <div class='qodef-grid qodef-layout--columns qodef-responsive--custom qodef-col-num--4 qodef-col-num--1024--2 qodef-col-num--768--2 qodef-col-num--680--1 qodef-col-num--480--1 qodef-alignment--left'>
+                        <div class='qodef-grid-inner clear'>
+                            <div class='qodef-grid-item'>
+                                <div class='widget widget_block'>
+                                    <img alt='Rawtracks Logo' src='https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/github-assets/images/new-logo-side-area-1.png' style='margin-bottom: -10px; margin-top: 8px; width: 205px;'/>
+                                </div>
+                            </div>
+                            <div class='qodef-grid-item'>
+                                <div class='widget widget_block'>
+                                    <div class='qodef-shortcode qodef-m qodef-icon-with-text qodef-layout--after-title qodef--icon-predefined'>
+                                        <div class='qodef-m-content'>
+                                            <h4 class='qodef-m-title'>
+                                                <a href='mailto:rawtracks@example.com'>
+                                                    <span class='qodef-m-title-inner'>
+                                                        <span class='qodef-m-title-text'>rawtracks@example.com</span>
+                                                        <span class='qodef-m-icon-wrapper'>
+                                                            <svg class='qodef-svg--button-arrow'>
+                                                                <line x1='0.9' y1='9.1' x2='8.9' y2='1.1'></line>
+                                                                <line x1='1' y1='1' x2='9' y2='1'></line>
+                                                                <line x1='9' y1='9' x2='9' y2='1'></line>
+                                                            </svg>
+                                                        </span>
+                                                    </span>
+                                                </a>
+                                            </h4>
+                                            <p class='qodef-m-text'>Book world-renowned and rising music artists, DJs, producers.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='qodef-grid-item'>
+                                <div class='widget widget_block'>
+                                    <div class='qodef-shortcode qodef-m qodef-icon-with-text qodef-layout--after-title qodef--icon-predefined'>
+                                        <div class='qodef-m-content'>
+                                            <h4 class='qodef-m-title'>
+                                                <a href='mailto:rawtracks@example.com'>
+                                                    <span class='qodef-m-title-inner'>
+                                                        <span class='qodef-m-title-text'>rawtracks@example.com</span>
+                                                        <span class='qodef-m-icon-wrapper'>
+                                                            <svg class='qodef-svg--button-arrow'>
+                                                                <line x1='0.9' y1='9.1' x2='8.9' y2='1.1'></line>
+                                                                <line x1='1' y1='1' x2='9' y2='1'></line>
+                                                                <line x1='9' y1='9' x2='9' y2='1'></line>
+                                                            </svg>
+                                                        </span>
+                                                    </span>
+                                                </a>
+                                            </h4>
+                                            <p class='qodef-m-text'>Book world-renowned and rising music artists, DJs, producers.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='qodef-grid-item'>
+                                <div class='widget widget_block'>
+                                    <h3><a href='https://www.instagram.com/qodeinteractive/' target='_blank'>Instagram</a></h3>
+                                    <h3><a href='https://twitter.com/qodeinteractive' target='_blank'>Twitter</a></h3>
+                                    <h3><a href='https://sr-rs.facebook.com/QodeInteractive/' target='_blank'>Facebook</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id='qodef-page-footer-bottom-area'>
+                <div id='qodef-page-footer-bottom-area-inner' class='qodef-content-grid'>
+                    <div class='copyright-text qodef-alignment--left'>
+                        <a href='https://qodeinteractive.com/'>
+                            <p>© <script>document.write(new Date().getFullYear())</script> Rawtracks. All Rights Reserved</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Back to Top -->
+        <a id='qodef-back-to-top' href='#qodef-page-wrapper' class='qodef--predefined'>
+            <span class='qodef-back-to-top-icon'>
+                <svg class='qodef-svg--back-to-top' xmlns='http://www.w3.org/2000/svg'>
+                    <line x1='24' y1='33.7' x2='24' y2='14.4'></line>
+                    <line x1='14.1' y1='24' x2='24' y2='14.4'></line>
+                    <line x1='34' y1='24' x2='24' y2='14.4'></line>
+                </svg>
+            </span>
+        </a>
+
+        <!-- Side Area -->
+        <div id='qodef-side-area'>
+            <a href='javascript:void(0)' id='qodef-side-area-close' class='qodef-opener-icon qodef-m qodef-source--predefined qodef--opened'>
+                <span class='qodef-m-icon'>
+                    <svg class='qodef-svg--close predefined' xmlns='http://www.w3.org/2000/svg'>
+                        <line x1='23' y1='1' x2='1' y2='23'></line>
+                        <line x1='1' y1='1' x2='23' y2='23'></line>
+                    </svg>
+                </span>
+            </a>
+            <div id='qodef-side-area-inner'>
+                <div class='widget widget_block'>
+                    <img alt='Rawtracks Logo' src='https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/github-assets/images/new-logo-side-area-1.png' style='margin-bottom: -10px; margin-top: 8px; width: 205px;'/>
+                </div>
+                <div class='widget widget_block'>
+                    <div class='wp-block-group'>
+                        <div class='wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow'>
+                            <p>A theme especially designed for various artists, up-and-coming DJs, producers and music festival organizers.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class='widget widget_rawtracks_core_separator'>
+                    <div class='qodef-shortcode qodef-m qodef-separator clear'>
+                        <div class='qodef-m-line' style='border-color: rgba(255, 255, 255, 0); margin-top: 24px'></div>
+                    </div>
+                </div>
+                <div class='widget widget_rawtracks_core_title_widget'>
+                    <h4 class='qodef-widget-title' style='margin-bottom: 21px'>Follow us on:</h4>
+                </div>
+                <div class='widget widget_rawtracks_core_instagram_list'>
+                    <div class='qodef-shortcode qodef-m qodef-instagram-list qodef-layout--columns qodef--no-bottom-space qodef-gutter--small qodef-col-num--3'>
+                        <!-- Instagram feed would be integrated here -->
+                        <div class='instagram-placeholder'>
+                            <p>Instagram feed integration</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Initialize Scripts -->
+    <script>
+    <![CDATA[
+        // Blogspot-specific initialization
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize audio player
+            if (typeof AudioPlayer !== 'undefined') {
+                AudioPlayer.init();
+            }
+
+            // Initialize navigation
+            if (typeof BlogspotNavigation !== 'undefined') {
+                BlogspotNavigation.init();
+            }
+
+            // Initialize animations
+            if (typeof RawtracksAnimations !== 'undefined') {
+                RawtracksAnimations.init();
+            }
+        });
+    ]]>
+    </script>
+</body>
+</html>
