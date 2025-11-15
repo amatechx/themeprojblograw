@@ -9,6 +9,7 @@
         <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0' name='viewport'/>
     </b:if>
 
+
     <b:include data='blog' name='all-head-content'/>
     <title><data:blog.pageTitle/></title>
 
@@ -28,8 +29,8 @@
 /* Import CSS from external files */
 @import url('https://raw.githubusercontent.com/amatechx/themeprojblograw/master/github-assets/vendors/css/elegant-icons.min.css');
 @import url('https://raw.githubusercontent.com/amatechx/themeprojblograw/master/github-assets/vendors/css/swiper.min.css');
-@import url('https://raw.githubusercontent.com/amatechx/themeprojblograw/master/github-assets/css/rawtracks-core.css');
 @import url('https://raw.githubusercontent.com/amatechx/themeprojblograw/master/github-assets/css/main.css');
+@import url('https://raw.githubusercontent.com/amatechx/themeprojblograw/master/github-assets/css/rawtracks-core.css');
 @import url('https://raw.githubusercontent.com/amatechx/themeprojblograw/master/github-assets/css/responsive.css');
     ]]>
     </b:skin>
