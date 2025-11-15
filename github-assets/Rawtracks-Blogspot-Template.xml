@@ -20,15 +20,19 @@
 .qodef-content-grid { max-width: 1400px; margin: 0 auto; }
 .qodef-grid-inner { display: flex; flex-wrap: wrap; margin: 0 -15px; }
 .qodef-grid-item { padding: 0 15px; }
+
+/* ==================================================
+   RAWTRACKS BLOGSPOT THEME CSS
+   ================================================== */
+
+/* Import CSS from external files */
+@import url('https://raw.githubusercontent.com/amatechx/themeprojblograw/master/github-assets/vendors/css/elegant-icons.min.css');
+@import url('https://raw.githubusercontent.com/amatechx/themeprojblograw/master/github-assets/vendors/css/swiper.min.css');
+@import url('https://raw.githubusercontent.com/amatechx/themeprojblograw/master/github-assets/css/rawtracks-core.css');
+@import url('https://raw.githubusercontent.com/amatechx/themeprojblograw/master/github-assets/css/main.css');
+@import url('https://raw.githubusercontent.com/amatechx/themeprojblograw/master/github-assets/css/responsive.css');
     ]]>
     </b:skin>
-
-    <!-- External CSS -->
-    <link href='https://raw.githubusercontent.com/amatechx/themeprojblograw/master/github-assets/css/main.css' rel='stylesheet' type='text/css'/>
-    <link href='https://raw.githubusercontent.com/amatechx/themeprojblograw/master/github-assets/css/rawtracks-core.css' rel='stylesheet' type='text/css'/>
-    <link href='https://raw.githubusercontent.com/amatechx/themeprojblograw/master/github-assets/css/responsive.css' rel='stylesheet' type='text/css'/>
-    <link href='https://raw.githubusercontent.com/amatechx/themeprojblograw/master/github-assets/vendors/css/elegant-icons.min.css' rel='stylesheet' type='text/css'/>
-    <link href='https://raw.githubusercontent.com/amatechx/themeprojblograw/master/github-assets/vendors/css/swiper.min.css' rel='stylesheet' type='text/css'/>
 
     <!-- Fonts -->
     <link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&amp;display=swap' rel='stylesheet' type='text/css'/>
