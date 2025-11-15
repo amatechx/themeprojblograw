@@ -68,7 +68,7 @@ Konversi template WordPress Rawtracks menjadi template Blogspot yang kompatibel 
    - Pergi ke **Theme** → **Edit HTML**
    - Backup template lama
    - Copy `Rawtracks-Blogspot-Template.xml`
-   - Ganti `YOUR_USERNAME` dan `YOUR_REPO` dengan nilai Anda
+   - Ganti placeholder dengan amatechx/themeprojblograw
    - Paste ke editor dan save
 
 3. **Konfigurasi Blog**
@@ -83,8 +83,8 @@ Edit file `Rawtracks-Blogspot-Template.xml` dan ganti:
 
 ```xml
 <!-- Ganti dengan username dan repo GitHub Anda -->
-YOUR_USERNAME → johndoe
-YOUR_REPO → rawtracks-blogspot
+amatechx → amatechx
+themeprojblograw → themeprojblograw
 ```
 
 ### Audio Player Setup

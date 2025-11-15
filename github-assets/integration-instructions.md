@@ -34,8 +34,8 @@ your-repo/
 5. Salin seluruh isi file `Rawtracks-Blogspot-Template.xml`
 6. Ganti seluruh kode HTML yang ada
 7. **PENTING:** Ganti placeholder berikut dengan URL GitHub Anda:
-   - `YOUR_USERNAME` → username GitHub Anda
-   - `YOUR_REPO` → nama repository Anda
+   - `YOUR_USERNAME` → amatechx
+   - `YOUR_REPO` → themeprojblograw
 
 ### 3. Konfigurasi Blogspot
 1. Pergi ke **Settings** → **Basic**

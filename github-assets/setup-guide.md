@@ -49,8 +49,8 @@ github-assets/
 ### Langkah 2: Upload Assets
 1. Clone repository ke lokal:
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
-cd YOUR_REPO
+git clone https://github.com/amatechx/themeprojblograw.git
+cd themeprojblograw
 ```
 
 2. Copy folder `github-assets/` ke dalam repository:
@@ -86,16 +86,16 @@ git push origin main
 ### Langkah 3: Upload Template Baru
 1. Buka file `Rawtracks-Blogspot-Template.xml`
 2. Ganti placeholder berikut:
-   - `YOUR_USERNAME` → username GitHub Anda
-   - `YOUR_REPO` → nama repository Anda
+   - `YOUR_USERNAME` → amatechx
+   - `YOUR_REPO` → themeprojblograw
 
 **Contoh:**
 ```xml
 <!-- Sebelum -->
-@import url('https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/github-assets/css/main.css');
+@import url('https://raw.githubusercontent.com/amatechx/themeprojblograw/master/github-assets/css/main.css');
 
 <!-- Sesudah -->
-@import url('https://raw.githubusercontent.com/johndoe/rawtracks-blogspot/main/github-assets/css/main.css');
+@import url('https://raw.githubusercontent.com/amatechx/themeprojblograw/master/github-assets/css/main.css');
 ```
 
 3. Copy seluruh isi file XML
